@@ -42,9 +42,9 @@ export default {
                     const userRole = localStorage.getItem('UserRole');
 
                     if (userRole === 'admin') {
-                        window.location.href = `http://localhost:5174/#/`;
+                        window.location.href = `http://127.0.0.1:8000/#/`;
                     } else {
-                        window.location.href = 'http://localhost:5174/#/pages/notfound'; // redirect to home page
+                        window.location.href = 'http://127.0.0.1:8000/#/pages/notfound'; // redirect to home page
                     }
                 } else {
                     alert('Login failed. Please check your credentials and try again.');

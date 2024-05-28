@@ -75,7 +75,7 @@ export default {
     },
     methods: {
         fetchCategories() {
-            fetch('http://localhost:8000/api/category')
+            fetch('http://127.0.0.1:8000/api/category')
                 .then((response) => response.json())
                 .then((data) => {
                     this.categories = data.categories;
@@ -96,7 +96,7 @@ export default {
             formData.append('category_id', this.category_id);
             formData.append('image', this.image);
 
-            fetch('http://localhost:8000/api/products', {
+            fetch('http://127.0.0.1:8000/api/products', {
                 method: 'POST',
                 headers: {
                     Authorization: `Bearer ${userToken}`

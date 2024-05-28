@@ -20,7 +20,7 @@
                     <tbody v-for="product in products" :key="product.id">
                         <tr>
                             <td>
-                                <img :src="`http://localhost:8000/${product.image}`" alt="" style="width: 50px" />
+                                <img :src="`http://127.0.0.1:8000/${product.image}`" alt="" style="width: 50px" />
                             </td>
                             <Column>{{ category.name }}</Column>
 
@@ -52,7 +52,7 @@ export default {
         deleteProduct(id) {
             const userToken = localStorage.getItem('userToken');
 
-            fetch(`http://localhost:8000/api/products/${id}`, {
+            fetch(`http://127.0.0.1:8000/api/products/${id}`, {
                 method: 'DELETE',
                 headers: {
                     Authorization: `Bearer ${userToken}`
@@ -87,7 +87,7 @@ export default {
             window.location.href = 'http://localhost:5174/#/pages/notfound'; // redirect to home page
         }
 
-        fetch('http://localhost:8000/api/adminproducts', {
+        fetch('http://127.0.0.1:8000/api/adminproducts', {
             headers: {
                 Authorization: `Bearer ${userToken}`
             }

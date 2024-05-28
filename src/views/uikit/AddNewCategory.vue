@@ -21,7 +21,7 @@ export default {
 
             formData.append('image', this.image);
 
-            fetch('http://localhost:8000/api/category', {
+            fetch('http://127.0.0.1:8000/api/category', {
                 method: 'POST',
                 headers: {
                     Authorization: `Bearer ${userToken}`
@@ -31,7 +31,7 @@ export default {
                 .then((response) => {
                     if (response.ok) {
                         // Redirect to home page
-                        window.location.href = `http://localhost:5174/#/uikit/Categories`;
+                        window.location.href = `http://127.0.0.1:8000/#/uikit/Categories`;
                     } else {
                         // Display error message
                         alert('Failed to add category');
@@ -48,12 +48,12 @@ export default {
         const userToken = localStorage.getItem('userToken');
 
         if (!userToken) {
-            window.location.href = 'http://localhost:5174/#/auth/login';
+            window.location.href = 'http://127.0.0.1:8000/#/auth/login';
         }
         const userRole = localStorage.getItem('UserRole');
 
         if (userRole !== 'admin') {
-            window.location.href = 'http://localhost:5174/#/pages/notfound'; // redirect to home page
+            window.location.href = 'http://127.0.0.1:8000/#/pages/notfound'; // redirect to home page
         }
     }
 };
