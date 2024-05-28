@@ -44,7 +44,7 @@ export default {
                     if (userRole === 'admin') {
                         window.location.href = `https://elegant-starburst-8966d7.netlify.app/#/`;
                     } else {
-                        window.location.href = 'http://127.0.0.1:8000/#/pages/notfound'; // redirect to home page
+                        window.location.href = 'https://elegant-starburst-8966d7.netlify.app/#/pages/notfound'; // redirect to home page
                     }
                 } else {
                     alert('Login failed. Please check your credentials and try again.');
