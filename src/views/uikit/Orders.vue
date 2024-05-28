@@ -41,12 +41,12 @@ export default {
         const userToken = localStorage.getItem('userToken');
 
         if (!userToken) {
-            window.location.href = 'http://localhost:5174/#/auth/login';
+            window.location.href = 'https://elegant-starburst-8966d7.netlify.app/#/auth/login';
         }
         const userRole = localStorage.getItem('UserRole');
 
         if (userRole !== 'admin') {
-            window.location.href = 'http://localhost:5174/#/pages/notfound'; // redirect to home page
+            window.location.href = 'https://elegant-starburst-8966d7.netlify.app/#/pages/notfound'; // redirect to home page
         }
 
         fetch('http://127.0.0.1:8000/api/orders', {

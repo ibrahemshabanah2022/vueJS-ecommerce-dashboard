@@ -64,12 +64,12 @@ export default {
         const userToken = localStorage.getItem('userToken');
 
         if (!userToken) {
-            window.location.href = 'http://localhost:5174/#/auth/login';
+            window.location.href = 'https://elegant-starburst-8966d7.netlify.app/#/auth/login';
         }
         const userRole = localStorage.getItem('UserRole');
 
         if (userRole !== 'admin') {
-            window.location.href = 'http://localhost:5174/#/pages/notfound'; // redirect to home page
+            window.location.href = 'https://elegant-starburst-8966d7.netlify.app/#/pages/notfound'; // redirect to home page
         }
         this.fetchCategories();
     },
@@ -106,7 +106,7 @@ export default {
                 .then((response) => {
                     if (response.ok) {
                         // Redirect to home page
-                        window.location.href = 'http://localhost:5174/#/uikit/AllProducts';
+                        window.location.href = 'https://elegant-starburst-8966d7.netlify.app/#/uikit/AllProducts';
                     } else {
                         // Display error message
                         alert('Failed to add product');
